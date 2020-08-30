@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/id_bottom_section"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:backgroundTint="@color/color_primary_light">
+
+        <EditText
+            android:id="@+id/id_edit_text"
+            android:layout_width="0dp"
+            android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:inputType=""/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_add"
+            android:onClick="addItemToList"
+            android:backgroundTint="@color/color_accent"
+            android:textColor="@color/color_text_icons"/>
+     </LinearLayout>
+    <LinearLayout
+        android:layout_above="@+id/id_bottom_section"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_primary">
+        <ListView
+            android:id="@+id/id_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+    </ListView>
+    </LinearLayout>
+</RelativeLayout>
